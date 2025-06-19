@@ -1,0 +1,249 @@
+(base) snigdhatalasila@MacBook-Air ~ % python3 -m venv yolovenv
+
+(base) snigdhatalasila@MacBook-Air ~ % source yolovenv/bin/activate
+
+(yolovenv) (base) snigdhatalasila@MacBook-Air ~ % which python
+
+/Users/snigdhatalasila/yolovenv/bin/python
+(yolovenv) (base) snigdhatalasila@MacBook-Air ~ % pip install ultralytics
+
+Collecting ultralytics
+  Obtaining dependency information for ultralytics from https://files.pythonhosted.org/packages/bc/df/4452c9cb8ee7c28d69fdf13f37090a1cc8bb44404c62c58bdf5bd9d27640/ultralytics-8.3.146-py3-none-any.whl.metadata
+  Downloading ultralytics-8.3.146-py3-none-any.whl.metadata (37 kB)
+Collecting numpy>=1.23.0 (from ultralytics)
+  Obtaining dependency information for numpy>=1.23.0 from https://files.pythonhosted.org/packages/4a/9f/0121e375000b5e50ffdd8b25bf78d8e1a5aa4cca3f185d41265198c7b834/numpy-2.2.6-cp311-cp311-macosx_14_0_arm64.whl.metadata
+  Downloading numpy-2.2.6-cp311-cp311-macosx_14_0_arm64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 3.2 MB/s eta 0:00:00
+Collecting matplotlib>=3.3.0 (from ultralytics)
+  Obtaining dependency information for matplotlib>=3.3.0 from https://files.pythonhosted.org/packages/c2/86/e1c86690610661cd716eda5f9d0b35eaf606ae6c9b6736687cfc8f2d0cd8/matplotlib-3.10.3-cp311-cp311-macosx_11_0_arm64.whl.metadata
+  Downloading matplotlib-3.10.3-cp311-cp311-macosx_11_0_arm64.whl.metadata (11 kB)
+Collecting opencv-python>=4.6.0 (from ultralytics)
+  Obtaining dependency information for opencv-python>=4.6.0 from https://files.pythonhosted.org/packages/05/4d/53b30a2a3ac1f75f65a59eb29cf2ee7207ce64867db47036ad61743d5a23/opencv_python-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl.metadata
+  Downloading opencv_python-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl.metadata (20 kB)
+Collecting pillow>=7.1.2 (from ultralytics)
+  Obtaining dependency information for pillow>=7.1.2 from https://files.pythonhosted.org/packages/84/92/6505b1af3d2849d5e714fc75ba9e69b7255c05ee42383a35a4d58f576b16/pillow-11.2.1-cp311-cp311-macosx_11_0_arm64.whl.metadata
+  Downloading pillow-11.2.1-cp311-cp311-macosx_11_0_arm64.whl.metadata (8.9 kB)
+Collecting pyyaml>=5.3.1 (from ultralytics)
+  Obtaining dependency information for pyyaml>=5.3.1 from https://files.pythonhosted.org/packages/8b/62/b9faa998fd185f65c1371643678e4d58254add437edb764a08c5a98fb986/PyYAML-6.0.2-cp311-cp311-macosx_11_0_arm64.whl.metadata
+  Downloading PyYAML-6.0.2-cp311-cp311-macosx_11_0_arm64.whl.metadata (2.1 kB)
+Collecting requests>=2.23.0 (from ultralytics)
+  Obtaining dependency information for requests>=2.23.0 from https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl.metadata
+  Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting scipy>=1.4.1 (from ultralytics)
+  Obtaining dependency information for scipy>=1.4.1 from https://files.pythonhosted.org/packages/4b/fa/a7e5b95afd80d24313307f03624acc65801846fa75599034f8ceb9e2cbf6/scipy-1.15.3-cp311-cp311-macosx_14_0_arm64.whl.metadata
+  Downloading scipy-1.15.3-cp311-cp311-macosx_14_0_arm64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 5.4 MB/s eta 0:00:00
+Collecting torch>=1.8.0 (from ultralytics)
+  Obtaining dependency information for torch>=1.8.0 from https://files.pythonhosted.org/packages/aa/3f/85b56f7e2abcfa558c5fbf7b11eb02d78a4a63e6aeee2bbae3bb552abea5/torch-2.7.0-cp311-none-macosx_11_0_arm64.whl.metadata
+  Downloading torch-2.7.0-cp311-none-macosx_11_0_arm64.whl.metadata (29 kB)
+Collecting torchvision>=0.9.0 (from ultralytics)
+  Obtaining dependency information for torchvision>=0.9.0 from https://files.pythonhosted.org/packages/b1/43/28bc858b022f6337326d75f4027d2073aad5432328f01ee1236d847f1b82/torchvision-0.22.0-cp311-cp311-macosx_11_0_arm64.whl.metadata
+  Downloading torchvision-0.22.0-cp311-cp311-macosx_11_0_arm64.whl.metadata (6.1 kB)
+Collecting tqdm>=4.64.0 (from ultralytics)
+  Obtaining dependency information for tqdm>=4.64.0 from https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl.metadata
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 5.8 MB/s eta 0:00:00
+Collecting psutil (from ultralytics)
+  Obtaining dependency information for psutil from https://files.pythonhosted.org/packages/04/8b/30f930733afe425e3cbfc0e1468a30a18942350c1a8816acfade80c005c4/psutil-7.0.0-cp36-abi3-macosx_11_0_arm64.whl.metadata
+  Downloading psutil-7.0.0-cp36-abi3-macosx_11_0_arm64.whl.metadata (22 kB)
+Collecting py-cpuinfo (from ultralytics)
+  Obtaining dependency information for py-cpuinfo from https://files.pythonhosted.org/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl.metadata
+  Downloading py_cpuinfo-9.0.0-py3-none-any.whl.metadata (794 bytes)
+Collecting pandas>=1.1.4 (from ultralytics)
+  Obtaining dependency information for pandas>=1.1.4 from https://files.pythonhosted.org/packages/52/11/9eac327a38834f162b8250aab32a6781339c69afe7574368fffe46387edf/pandas-2.2.3-cp311-cp311-macosx_11_0_arm64.whl.metadata
+  Downloading pandas-2.2.3-cp311-cp311-macosx_11_0_arm64.whl.metadata (89 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.9/89.9 kB 7.7 MB/s eta 0:00:00
+Collecting ultralytics-thop>=2.0.0 (from ultralytics)
+  Obtaining dependency information for ultralytics-thop>=2.0.0 from https://files.pythonhosted.org/packages/a6/10/251f036b4c5d77249f9a119cc89dafe8745dc1ad1f1a5f06b6a3988ca454/ultralytics_thop-2.0.14-py3-none-any.whl.metadata
+  Downloading ultralytics_thop-2.0.14-py3-none-any.whl.metadata (9.4 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.3.0->ultralytics)
+  Obtaining dependency information for contourpy>=1.0.1 from https://files.pythonhosted.org/packages/e6/75/3469f011d64b8bbfa04f709bfc23e1dd71be54d05b1b083be9f5b22750d1/contourpy-1.3.2-cp311-cp311-macosx_11_0_arm64.whl.metadata
+  Downloading contourpy-1.3.2-cp311-cp311-macosx_11_0_arm64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.3.0->ultralytics)
+  Obtaining dependency information for cycler>=0.10 from https://files.pythonhosted.org/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl.metadata
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.3.0->ultralytics)
+  Obtaining dependency information for fonttools>=4.22.0 from https://files.pythonhosted.org/packages/50/3f/9fecd69149b0eec5ca46ec58de83b2fd34d07204fe2c12c209255082507a/fonttools-4.58.1-cp311-cp311-macosx_10_9_universal2.whl.metadata
+  Downloading fonttools-4.58.1-cp311-cp311-macosx_10_9_universal2.whl.metadata (106 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.1/106.1 kB 5.7 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.3.0->ultralytics)
+  Obtaining dependency information for kiwisolver>=1.3.1 from https://files.pythonhosted.org/packages/5f/b4/c12b3ac0852a3a68f94598d4c8d569f55361beef6159dce4e7b624160da2/kiwisolver-1.4.8-cp311-cp311-macosx_11_0_arm64.whl.metadata
+  Downloading kiwisolver-1.4.8-cp311-cp311-macosx_11_0_arm64.whl.metadata (6.2 kB)
+Collecting packaging>=20.0 (from matplotlib>=3.3.0->ultralytics)
+  Obtaining dependency information for packaging>=20.0 from https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl.metadata
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib>=3.3.0->ultralytics)
+  Obtaining dependency information for pyparsing>=2.3.1 from https://files.pythonhosted.org/packages/05/e7/df2285f3d08fee213f2d041540fa4fc9ca6c2d44cf36d3a035bf2a8d2bcc/pyparsing-3.2.3-py3-none-any.whl.metadata
+  Downloading pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.3.0->ultralytics)
+  Obtaining dependency information for python-dateutil>=2.7 from https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas>=1.1.4->ultralytics)
+  Obtaining dependency information for pytz>=2020.1 from https://files.pythonhosted.org/packages/81/c4/34e93fe5f5429d7570ec1fa436f1986fb1f00c3e0f43a589fe2bbcd22c3f/pytz-2025.2-py2.py3-none-any.whl.metadata
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas>=1.1.4->ultralytics)
+  Obtaining dependency information for tzdata>=2022.7 from https://files.pythonhosted.org/packages/5c/23/c7abc0ca0a1526a0774eca151daeb8de62ec457e77262b66b359c3c7679e/tzdata-2025.2-py2.py3-none-any.whl.metadata
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting charset-normalizer<4,>=2 (from requests>=2.23.0->ultralytics)
+  Obtaining dependency information for charset-normalizer<4,>=2 from https://files.pythonhosted.org/packages/05/85/4c40d00dcc6284a1c1ad5de5e0996b06f39d8232f1031cd23c2f5c07ee86/charset_normalizer-3.4.2-cp311-cp311-macosx_10_9_universal2.whl.metadata
+  Downloading charset_normalizer-3.4.2-cp311-cp311-macosx_10_9_universal2.whl.metadata (35 kB)
+Collecting idna<4,>=2.5 (from requests>=2.23.0->ultralytics)
+  Obtaining dependency information for idna<4,>=2.5 from https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl.metadata
+  Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests>=2.23.0->ultralytics)
+  Obtaining dependency information for urllib3<3,>=1.21.1 from https://files.pythonhosted.org/packages/6b/11/cc635220681e93a0183390e26485430ca2c7b5f9d33b15c74c2861cb8091/urllib3-2.4.0-py3-none-any.whl.metadata
+  Downloading urllib3-2.4.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests>=2.23.0->ultralytics)
+  Obtaining dependency information for certifi>=2017.4.17 from https://files.pythonhosted.org/packages/4a/7e/3db2bd1b1f9e95f7cddca6d6e75e2f2bd9f51b1246e546d88addca0106bd/certifi-2025.4.26-py3-none-any.whl.metadata
+  Downloading certifi-2025.4.26-py3-none-any.whl.metadata (2.5 kB)
+Collecting filelock (from torch>=1.8.0->ultralytics)
+  Obtaining dependency information for filelock from https://files.pythonhosted.org/packages/4d/36/2a115987e2d8c300a974597416d9de88f2444426de9571f4b59b2cca3acc/filelock-3.18.0-py3-none-any.whl.metadata
+  Downloading filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting typing-extensions>=4.10.0 (from torch>=1.8.0->ultralytics)
+  Obtaining dependency information for typing-extensions>=4.10.0 from https://files.pythonhosted.org/packages/8b/54/b1ae86c0973cc6f0210b53d508ca3641fb6d0c56823f288d108bc7ab3cc8/typing_extensions-4.13.2-py3-none-any.whl.metadata
+  Downloading typing_extensions-4.13.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting sympy>=1.13.3 (from torch>=1.8.0->ultralytics)
+  Obtaining dependency information for sympy>=1.13.3 from https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl.metadata
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx (from torch>=1.8.0->ultralytics)
+  Obtaining dependency information for networkx from https://files.pythonhosted.org/packages/b9/54/dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261/networkx-3.4.2-py3-none-any.whl.metadata
+  Downloading networkx-3.4.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting jinja2 (from torch>=1.8.0->ultralytics)
+  Obtaining dependency information for jinja2 from https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl.metadata
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec (from torch>=1.8.0->ultralytics)
+  Obtaining dependency information for fsspec from https://files.pythonhosted.org/packages/bb/61/78c7b3851add1481b048b5fdc29067397a1784e2910592bc81bb3f608635/fsspec-2025.5.1-py3-none-any.whl.metadata
+  Downloading fsspec-2025.5.1-py3-none-any.whl.metadata (11 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=3.3.0->ultralytics)
+  Obtaining dependency information for six>=1.5 from https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl.metadata
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch>=1.8.0->ultralytics)
+  Obtaining dependency information for mpmath<1.4,>=1.1.0 from https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl.metadata
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch>=1.8.0->ultralytics)
+  Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/6c/30/316d194b093cde57d448a4c3209f22e3046c5bb2fb0820b118292b334be7/MarkupSafe-3.0.2-cp311-cp311-macosx_11_0_arm64.whl.metadata
+  Downloading MarkupSafe-3.0.2-cp311-cp311-macosx_11_0_arm64.whl.metadata (4.0 kB)
+Downloading ultralytics-8.3.146-py3-none-any.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 8.4 MB/s eta 0:00:00
+Downloading matplotlib-3.10.3-cp311-cp311-macosx_11_0_arm64.whl (8.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.1/8.1 MB 7.4 MB/s eta 0:00:00
+Downloading numpy-2.2.6-cp311-cp311-macosx_14_0_arm64.whl (5.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 6.2 MB/s eta 0:00:00
+Downloading opencv_python-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl (37.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.3/37.3 MB 4.1 MB/s eta 0:00:00
+Downloading pandas-2.2.3-cp311-cp311-macosx_11_0_arm64.whl (11.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 5.8 MB/s eta 0:00:00
+Downloading pillow-11.2.1-cp311-cp311-macosx_11_0_arm64.whl (3.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 7.3 MB/s eta 0:00:00
+Downloading PyYAML-6.0.2-cp311-cp311-macosx_11_0_arm64.whl (172 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 172.0/172.0 kB 11.8 MB/s eta 0:00:00
+Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 7.1 MB/s eta 0:00:00
+Downloading scipy-1.15.3-cp311-cp311-macosx_14_0_arm64.whl (22.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.4/22.4 MB 9.0 MB/s eta 0:00:00
+Downloading torch-2.7.0-cp311-none-macosx_11_0_arm64.whl (68.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.6/68.6 MB 9.1 MB/s eta 0:00:00
+Downloading torchvision-0.22.0-cp311-cp311-macosx_11_0_arm64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 9.2 MB/s eta 0:00:00
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 7.4 MB/s eta 0:00:00
+Downloading ultralytics_thop-2.0.14-py3-none-any.whl (26 kB)
+Downloading psutil-7.0.0-cp36-abi3-macosx_11_0_arm64.whl (239 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 239.5/239.5 kB 5.2 MB/s eta 0:00:00
+Downloading py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+Downloading certifi-2025.4.26-py3-none-any.whl (159 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.6/159.6 kB 13.9 MB/s eta 0:00:00
+Downloading charset_normalizer-3.4.2-cp311-cp311-macosx_10_9_universal2.whl (198 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 198.8/198.8 kB 11.2 MB/s eta 0:00:00
+Downloading contourpy-1.3.2-cp311-cp311-macosx_11_0_arm64.whl (254 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 254.6/254.6 kB 11.2 MB/s eta 0:00:00
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.58.1-cp311-cp311-macosx_10_9_universal2.whl (2.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 8.2 MB/s eta 0:00:00
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.4/70.4 kB 6.6 MB/s eta 0:00:00
+Downloading kiwisolver-1.4.8-cp311-cp311-macosx_11_0_arm64.whl (65 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.4/65.4 kB 6.4 MB/s eta 0:00:00
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 10.3 MB/s eta 0:00:00
+Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.1/111.1 kB 10.2 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 7.5 MB/s eta 0:00:00
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 7.1 MB/s eta 0:00:00
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 9.1 MB/s eta 0:00:00
+Downloading typing_extensions-4.13.2-py3-none-any.whl (45 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 5.4 MB/s eta 0:00:00
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 6.9 MB/s eta 0:00:00
+Downloading urllib3-2.4.0-py3-none-any.whl (128 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.7/128.7 kB 6.1 MB/s eta 0:00:00
+Downloading filelock-3.18.0-py3-none-any.whl (16 kB)
+Downloading fsspec-2025.5.1-py3-none-any.whl (199 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.1/199.1 kB 7.7 MB/s eta 0:00:00
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.3 MB/s eta 0:00:00
+Downloading networkx-3.4.2-py3-none-any.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 8.1 MB/s eta 0:00:00
+Downloading MarkupSafe-3.0.2-cp311-cp311-macosx_11_0_arm64.whl (12 kB)
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 7.9 MB/s eta 0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: pytz, py-cpuinfo, mpmath, urllib3, tzdata, typing-extensions, tqdm, sympy, six, pyyaml, pyparsing, psutil, pillow, packaging, numpy, networkx, MarkupSafe, kiwisolver, idna, fsspec, fonttools, filelock, cycler, charset-normalizer, certifi, scipy, requests, python-dateutil, opencv-python, jinja2, contourpy, torch, pandas, matplotlib, ultralytics-thop, torchvision, ultralytics
+Successfully installed MarkupSafe-3.0.2 certifi-2025.4.26 charset-normalizer-3.4.2 contourpy-1.3.2 cycler-0.12.1 filelock-3.18.0 fonttools-4.58.1 fsspec-2025.5.1 idna-3.10 jinja2-3.1.6 kiwisolver-1.4.8 matplotlib-3.10.3 mpmath-1.3.0 networkx-3.4.2 numpy-2.2.6 opencv-python-4.11.0.86 packaging-25.0 pandas-2.2.3 pillow-11.2.1 psutil-7.0.0 py-cpuinfo-9.0.0 pyparsing-3.2.3 python-dateutil-2.9.0.post0 pytz-2025.2 pyyaml-6.0.2 requests-2.32.3 scipy-1.15.3 six-1.17.0 sympy-1.14.0 torch-2.7.0 torchvision-0.22.0 tqdm-4.67.1 typing-extensions-4.13.2 tzdata-2025.2 ultralytics-8.3.146 ultralytics-thop-2.0.14 urllib3-2.4.0
+
+[notice] A new release of pip is available: 23.2.1 -> 25.1.1
+[notice] To update, run: pip install --upgrade pip
+(yolovenv) (base) snigdhatalasila@MacBook-Air ~ % yolo checks
+
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/Users/snigdhatalasila/Library/Application Support/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+Ultralytics 8.3.146 🚀 Python-3.11.5 torch-2.7.0 CPU (Apple M2)
+Setup complete ✅ (8 CPUs, 8.0 GB RAM, 188.2/460.4 GB disk)
+
+OS                  macOS-14.6.1-arm64-arm-64bit
+Environment         Darwin
+Python              3.11.5
+Install             pip
+Path                /Users/snigdhatalasila/yolovenv/lib/python3.11/site-packages/ultralytics
+RAM                 8.00 GB
+Disk                188.2/460.4 GB
+CPU                 Apple M2
+CPU count           8
+GPU                 None
+GPU count           None
+CUDA                None
+
+numpy               ✅ 2.2.6>=1.23.0
+matplotlib          ✅ 3.10.3>=3.3.0
+opencv-python       ✅ 4.11.0.86>=4.6.0
+pillow              ✅ 11.2.1>=7.1.2
+pyyaml              ✅ 6.0.2>=5.3.1
+requests            ✅ 2.32.3>=2.23.0
+scipy               ✅ 1.15.3>=1.4.1
+torch               ✅ 2.7.0>=1.8.0
+torch               ✅ 2.7.0!=2.4.0,>=1.8.0; sys_platform == "win32"
+torchvision         ✅ 0.22.0>=0.9.0
+tqdm                ✅ 4.67.1>=4.64.0
+psutil              ✅ 7.0.0
+py-cpuinfo          ✅ 9.0.0
+pandas              ✅ 2.2.3>=1.1.4
+ultralytics-thop    ✅ 2.0.14>=2.0.0
+(yolovenv) (base) snigdhatalasila@MacBook-Air ~ % yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
+
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8n.pt to 'yolov8n.pt'...
+100%|██████████████████████████████████████| 6.25M/6.25M [00:00<00:00, 7.44MB/s]
+Ultralytics 8.3.146 🚀 Python-3.11.5 torch-2.7.0 CPU (Apple M2)
+YOLOv8n summary (fused): 72 layers, 3,151,904 parameters, 0 gradients, 8.7 GFLOPs
+
+Downloading https://ultralytics.com/images/bus.jpg to 'bus.jpg'...
+100%|████████████████████████████████████████| 134k/134k [00:00<00:00, 2.97MB/s]
+image 1/1 /Users/snigdhatalasila/bus.jpg: 640x480 4 persons, 1 bus, 1 stop sign, 60.0ms
+Speed: 2.5ms preprocess, 60.0ms inference, 1.4ms postprocess per image at shape (1, 3, 640, 480)
+Results saved to runs/detect/predict
+💡 Learn more at https://docs.ultralytics.com/modes/predict
+(yolovenv) (base) snigdhatalasila@MacBook-Air ~ % open runs/detect/predict/bus.jpg
+
