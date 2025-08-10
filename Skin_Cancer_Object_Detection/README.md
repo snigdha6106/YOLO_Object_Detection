@@ -16,7 +16,7 @@ Convert segmentation masks into bounding box annotations by computing the minimu
 ### Binary Label Transformation
 Transform the multi-class lesion labels into a binary classification: malignant lesions (cancerous) are labeled as 1, while benign lesions (non-cancerous) are labeled as 0.
 
-![Aftert](images/dataset.png)
+![Aftert](images_files/dataset.png)
 
 ### Data Balancing (Down Sampling)
 Downsample the majority class (benign) to address class imbalance, ensuring balanced representation between cancerous and non-cancerous samples.
@@ -51,4 +51,4 @@ Best Performance - YOLOv8:
 - mAP@50: 90%
 - mAP@50-95: 74%
 
-![Validation Sample](images/val_batch1_pred1.jpg)
+![Validation Sample](images_files/val_batch1_pred1.jpg)
